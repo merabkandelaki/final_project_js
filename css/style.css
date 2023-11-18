@@ -131,12 +131,14 @@ section {
     overflow: hidden;
 }
 
-.movie-card:hover img {
-    transform: scale(1.4);
-}
+@media (min-width: 1024px) {
+    .movie-card:hover img {
+        transform: scale(1.4);
+    }
 
-.movie-card:hover .movie-info {
-    transform: translateY(0);
+    .movie-card:hover .movie-info {
+        transform: translateY(0);
+    }
 }
 
 .movie-card img {

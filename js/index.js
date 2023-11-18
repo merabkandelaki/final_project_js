@@ -12,8 +12,14 @@ const PER_PAGE = 20;
 let currentPage = 1;
 
 function scrollToTop() {
+  const top = window.innerWidth <= 1439 && window.innerWidth >= 1024 ? 776 : 
+  window.innerWidth <= 1023 && window.innerWidth >= 768 ? 575 :
+  window.innerWidth <= 767 && window.innerWidth >= 465 ? 448 : 
+  window.innerWidth <= 464  && window.innerWidth >= 376 ? 291 : 
+  window.innerWidth <= 375 ? 248 :
+  1008
   window.scroll({
-    top: 1008,
+    top,
     left: 0,
     behavior: "smooth",
   });
